@@ -18,9 +18,8 @@ port=":80"
 # for more details.
 
 [database]
-driver="sqlite3"
-datasource="/var/lib/drone/drone.sqlite"
-
+driver=::DB_DRIVER::
+datasource=::DB_DATASOURCE::
 
 #####################################################################
 # Open Registration allows users to self-register for Drone.
@@ -33,9 +32,9 @@ datasource="/var/lib/drone/drone.sqlite"
 # [registration]
 # open=true
 
-# [github]
-# client=""
-# secret=""
+[github]
+client=::GITHUB_CLIENT::
+secret=::GITHUB_SECRET::
 
 # [github_enterprise]
 # client=""
@@ -66,5 +65,5 @@ url="::GITLAB_URL::"
 # cert=""
 # key=""
 nodes=[
-    "tcp://192.168.33.10:2376"
+    "::WORKER_URL::"
 ]

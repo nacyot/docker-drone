@@ -14,8 +14,14 @@ RUN \
 ADD ./files /root/files
 RUN chmod +x /root/files/*.sh
 
+ENV DB_DRIVER sqlite3
+ENV DB_DATASOURCE \/var\/lib\/drone\/drone.sqlite
 ENV GITLAB_URL http:\/\/192.168.59.103:10080
+# ENV GITHUB_CLIENT
+# ENV GITHUB_SECRET
+ENV WORKER_URL tcp:\/\/192.168.33.10:2376
 
+VOLUME /var/lib/drone
 EXPOSE 80
 CMD /root/files/setup_configs.sh && /root/files/run.sh
 
