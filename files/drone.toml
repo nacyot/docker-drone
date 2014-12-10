@@ -65,5 +65,5 @@ url="::GITLAB_URL::"
 # cert=""
 # key=""
 nodes=[
-    "::WORKER_URL::"
+    ::WORKERS_URL::
 ]
