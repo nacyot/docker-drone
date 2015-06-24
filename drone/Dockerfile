@@ -1,4 +1,4 @@
-FROM dockerfile/ubuntu
+FROM ubuntu:14.04
 MAINTAINER nacyot <propellerheaven@gmail.com>
 
 # Install Docker Client
