@@ -1,6 +1,10 @@
 FROM ubuntu:14.04
 MAINTAINER nacyot <propellerheaven@gmail.com>
 
+RUN \
+  apt-get update &&\
+  apt-get install wget
+
 # Install Docker Client
 RUN \
   wget https://get.docker.com/builds/Linux/x86_64/docker-latest -O /usr/bin/docker && \
