@@ -3,7 +3,7 @@ MAINTAINER nacyot <propellerheaven@gmail.com>
 
 RUN \
   apt-get update &&\
-  apt-get install wget
+  apt-get install -y wget
 
 # Install Docker Client
 RUN \
