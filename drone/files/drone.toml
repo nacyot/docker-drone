@@ -49,6 +49,10 @@ secret="::GITHUB_SECRET::"
 
 [gitlab]
 url="::GITLAB_URL::"
+client="::GITLAB_CLIENT::"
+secret="::GITLAB_SECRET::"
+skip_verify=false
+open=false
 
 #####################################################################
 # SMTP configuration for Drone. This is required if you plan
